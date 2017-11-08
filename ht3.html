@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <style>
+body{
+  background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507917972&di=4d2770f86e71ae6945917cd85e79d2f9&imgtype=jpg&er=1&src=http%3A%2F%2Fy.zdmimg.com%2F201702%2F08%2F589ada98622c98779.jpg');
+  background-size:cover;
+}
+#div1{
+  padding:10px;
+  float:left;
+  margin-left:25px;
+  background-color:#42f45f;
+  width:280px;
+  border-radius:30px;
+  opacity:0.9;
+}
+#div2{
+    padding:10px;
+ float:left;
+  margin-left:30px;
+  background-color:#42f45f;
+  width:280px;
+  border-radius:30px;
+  opacity:0.9;
+}
+#div3{
+    padding:10px;
+ float:left;
+  margin-left:30px;
+  background-color:#42f45f;
+  width:280px;
+  border-radius:30px;
+  opacity:0.9;
+}
+#div4{
+    padding:10px;
+ float:left;
+  margin-left:30px;
+  background-color:#42f45f;
+  width:280px;
+  border-radius:30px;
+  opacity:0.9;
+}
+#menu{
+  
+  width:98%;
+  height:327px;
+  background-color:blue;
+  float:left;
+  margin-left:15px;
+  margin-top:20px;
+  border-radius:30px;
+  opacity:0.7;
+  display:none;
+}
+    
+    </style>
+    <script>
+  //globo variable
+   var d= new Date();
+   
+      //function for room1
+ function checkIn(){
+ 			var y= document.getElementById('div1');
+      var x= y.getElementsByTagName('li').length;
+  if (x<3){
+      var createList=document.createElement('li');
+      var guessName=document.getElementById('box1').value + d;
+      var newGuess=document.createTextNode(guessName);
+      createList.appendChild(newGuess);
+      var guessOne=y.getElementsByTagName('ol')[0];
+      guessOne.appendChild(createList);
+    }
+    else{
+      return;
+    }
+}
+    function checkOut(){
+    	var y=document.getElementById('div1');
+      var select=document.getElementById('box2').value -1;
+      var z=document.getElementById('box2');
+      z.selectedIndex=0;
+      var setNumber=parseInt(select);
+      var remove=y.getElementsByTagName('li')[setNumber];
+      var child=remove.parentNode;
+      child.removeChild(remove);
+}
+//function for room2
+ function checkIn2(){
+ 			var y= document.getElementById('div2');
+      var x= y.getElementsByTagName('li').length;
+  if (x<3){
+      var createList=document.createElement('li');
+      var guessName=document.getElementById('box3').value+" "+d;
+      var newGuess=document.createTextNode(guessName);
+      createList.appendChild(newGuess);
+      var guessOne=y.getElementsByTagName('ol')[0];
+      guessOne.appendChild(createList);
+    }
+    else{
+      return;
+    }
+}
+    function checkOut2(){
+    	var y=document.getElementById('div2');
+      var select=document.getElementById('box4').value -1;
+      var z=document.getElementById('box4');
+      z.selectedIndex=0;
+      var setNumber=parseInt(select);
+      var remove=y.getElementsByTagName('li')[setNumber];
+      var child=remove.parentNode;
+      child.removeChild(remove);
+}
+//function for room3
+ function checkIn3(){
+ 			var y= document.getElementById('div3');
+      var x= y.getElementsByTagName('li').length;
+  if (x<3){
+      var createList=document.createElement('li');
+      var guessName=document.getElementById('box5').value+" "+d;
+      var newGuess=document.createTextNode(guessName);
+      createList.appendChild(newGuess);
+      var guessOne=y.getElementsByTagName('ol')[0];
+      guessOne.appendChild(createList);
+    }
+    else{
+      return;
+    }
+}
+    function checkOut3(){
+    	var y=document.getElementById('div3');
+      var select=document.getElementById('box6').value -1;
+      var z=document.getElementById('box6');
+      z.selectedIndex=0;
+      var setNumber=parseInt(select);
+      var remove=y.getElementsByTagName('li')[setNumber];
+      var child=remove.parentNode;
+      child.removeChild(remove);
+}
+//function for room 4
+ function checkIn4(){
+ 			var y= document.getElementById('div4');
+      var x= y.getElementsByTagName('li').length;
+  if (x<3){
+      var createList=document.createElement('li');
+      var guessName=document.getElementById('box7').value+" "+d;
+      var newGuess=document.createTextNode(guessName);
+      createList.appendChild(newGuess);
+      var guessOne=y.getElementsByTagName('ol')[0];
+      guessOne.appendChild(createList);
+    }
+    else{
+      return;
+    }
+}
+    function checkOut4(){
+    	var y=document.getElementById('div4');
+      var select=document.getElementById('box8').value -1;
+      var z=document.getElementById('box8');
+      z.selectedIndex=0;
+      var setNumber=parseInt(select);
+      var remove=y.getElementsByTagName('li')[setNumber];
+      var child=remove.parentNode;
+      child.removeChild(remove);
+}
+    </script>
+  </head>
+  <body>
+  <div id="div1">
+<h2>Room1</h2>
+<p>Guest Name</p>
+<input id="box1"><button onclick="checkIn()">check in</button>
+<p>Check out by number</p>
+<select id="box2" onchange="checkOut(this,value);">
+  <option>Select a Number</option>
+  <option value="1">guest 1</option>
+  <option value="2">guest 2</option>
+  <option value="3">guest 3</option>
+</select>
+<ol>
+<li> zhi</li>
+</ol>
+</div>
+
+
+<div id="div2">
+<h2>Room2</h2>
+<p>Guest Name</p>
+<input id="box3"><button onclick="checkIn2()">check in</button>
+<p>Check out by number</p>
+<select id="box4" onchange="checkOut2(this,value);">
+  <option>Select a Number</option>
+  <option value="1">guest 1</option>
+  <option value="2">guest 2</option>
+  <option value="3">guest 3</option>
+</select>
+<ol>
+<li> zhi</li>
+</ol>
+</div>
+
+<div id="div3">
+<h2>Room3</h2>
+<p>Guest Name</p>
+<input id="box5"><button onclick="checkIn3()">check in</button>
+<p>Check out by number</p>
+<select id="box6" onchange="checkOut3(this,value);">
+  <option>Select a Number</option>
+  <option value="1">guest 1</option>
+  <option value="2">guest 2</option>
+  <option value="3">guest 3</option>
+</select>
+<ol>
+<li> zhi</li>
+</ol>
+</div>
+
+<div id="div4">
+<h2>Room4</h2>
+<p>Guest Name</p>
+<input id="box7"><button onclick="checkIn4()">check in</button>
+<p>Check out by number</p>
+<select id="box8" onchange="checkOut4(this,value);">
+  <option>Select a Number</option>
+  <option value="1">guest 1</option>
+  <option value="2">guest 2</option>
+  <option value="3">guest 3</option>
+</select>
+<ol>
+<li> zhi</li>
+</ol>
+</div>
+<div id="menu">
+  
+</div>
+  </body>
+</html>
