@@ -65,6 +65,9 @@ function create() {
 	ledge = platforms.create(500,200,'ground');
 	
 	ledge.body.immovable = true;
+	ledge.platforms = me.game.add.group();
+    ledge.platforms.enableBody = true;
+    ledge.platforms.createMultiple(250, 'ground');
 }
 
 function update() {
