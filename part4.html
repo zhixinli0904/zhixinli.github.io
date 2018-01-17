@@ -52,6 +52,12 @@ function create() {
 
     //  Now let's create two ledges
     var ledge = platforms.create(400, 400, 'ground');
+	ledge = platforms.create(-150, 250, 'ground');
+	ledge = platforms.create(100,100,'ground');
+	ledge = platforms.create(500,200,'ground');
+	
+	ledge.platforms.setAll('body.immovable',true);
+	ledge.platforms.setAll('body.velocity.x', 100);
    /* ledge.body.immovable = true;
 
     ledge = platforms.create(-150, 250, 'ground');
